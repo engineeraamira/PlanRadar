@@ -1,0 +1,64 @@
+<%= form_with(model: user) do |form| %>
+  <% if user.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+        <% user.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :email, style: "display: block" %>
+    <%= form.text_field :email %>
+  </div><br>
+
+  <div>
+    <%= form.label :password, style: "display: block" %>
+    <%= form.password_field :password %>
+  </div><br>
+
+
+  <div>
+    <%= form.label :name, style: "display: block" %>
+    <%= form.text_field :name %>
+  </div><br>
+
+  <div>
+    <%= form.label :phone, style: "display: block" %>
+    <%= form.text_field :phone %>
+  </div><br>
+
+  <div>
+    <%= form.label :notification_method, style: "display: block" %>
+    <%= form.select :notification_method, ['email', 'sms', 'push_notification'] %>
+  </div><br>
+
+  <div>
+    <%= form.label :send_due_date_reminder, style: "display: block" %>
+    <%= form.check_box :send_due_date_reminder %>
+  </div><br>
+
+  <div>
+    <%= form.label :due_date_reminder_interval, style: "display: block" %>
+    <%= form.number_field :due_date_reminder_interval %>
+  </div><br>
+
+  <div>
+    <%= form.label :due_date_reminder_time, style: "display: block" %>
+    <%= form.time_field :due_date_reminder_time %>
+  </div><br>
+
+  <div>
+    <%= form.label :time_zone, style: "display: block" %>
+    <%= form.time_zone_select :time_zone %>
+  </div><br>
+
+    
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

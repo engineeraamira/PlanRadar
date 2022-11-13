@@ -1,0 +1,72 @@
+<div id="<%= dom_id user %>">
+  <p>
+    <strong>EMail:</strong>
+    <%= user.email %>
+  </p>
+
+  <p>
+    <strong>Name:</strong>
+    <%= user.name %>
+  </p>
+
+  <p>
+    <strong>Phone:</strong>
+    <%= user.phone %>
+  </p>
+
+  <p>
+    <strong>Notification method:</strong>
+    <%= user.notification_method %>
+  </p>
+
+  <p>
+    <strong>Send due date reminder:</strong>
+    <%= user.send_due_date_reminder %>
+  </p>
+
+  <p>
+    <strong>Due date reminder interval:</strong>
+    <%= (user.due_date_reminder_interval == 0)? 'on due date' : user.due_date_reminder_interval.to_s + ' day before the due date'  %>
+  </p>
+
+  <p>
+    <strong>Due date reminder time:</strong>
+    <%= user.due_date_reminder_time.to_fs(:time) %>
+  </p>
+
+  <p>
+    <strong>Time zone:</strong>
+    <%= user.time_zone %>
+  </p>
+
+  <p>
+    <strong>Status:</strong>
+    <%= user.status %>
+  </p>
+
+  <p>
+    <strong>Deleted:</strong>
+    <%= user.deleted %>
+  </p>
+
+  <p>
+    <strong>Locked:</strong>
+    <%= user.locked %>
+  </p>
+
+  <p>
+    <strong>Unlock token:</strong>
+    <%= user.unlock_token %>
+  </p>
+
+  <p>
+    <strong>Login attempts:</strong>
+    <%= user.login_attempts %>
+  </p>
+
+  <p>
+    <strong>Failed attempts:</strong>
+    <%= user.failed_attempts %>
+  </p>
+
+</div>

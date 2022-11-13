@@ -1,0 +1,33 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  mail: MyString
+  name: MyString
+  phone: MyString
+  notification_method: 1
+  send_due_date_reminder: false
+  due_date_reminder_interval: 1
+  due_date_reminder_time: 2022-11-11 10:57:33
+  time_zone: MyString
+  status: false
+  deleted: false
+  locked: false
+  unlock_token: MyString
+  login_attempts: 1
+  failed_attempts: 1
+
+two:
+  mail: MyString
+  name: MyString
+  phone: MyString
+  notification_method: 1
+  send_due_date_reminder: false
+  due_date_reminder_interval: 1
+  due_date_reminder_time: 2022-11-11 10:57:33
+  time_zone: MyString
+  status: false
+  deleted: false
+  locked: false
+  unlock_token: MyString
+  login_attempts: 1
+  failed_attempts: 1
